@@ -1,0 +1,372 @@
+@charset 'utf-8';
+/* html{
+	font-size: 625%;
+} */
+body,h1,h2,h3,h4,ul,ol,p,form,fieldset,figure{
+	margin: 0;
+	padding: 0;
+}
+div,figure,img,input,button{
+	box-sizing: border-box; 
+}
+body{
+	background-color: #fff;
+	font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft Yahe UI"，"Microsoft Yahei",SimHei;
+	
+}
+ul,ol{
+	list-style: outside none none;
+}
+a{
+	text-decoration: none;
+}
+img{
+	display: block;
+	max-width: 100%;
+}
+.none{
+	display: none;
+}
+.clearfix{
+	content: ".";
+	height: 0;
+	visibility: hidden;
+	clear: both;
+	display: block;
+
+}
+#header{
+	width: 100%;
+	height: 70px;
+
+	box-shadow: 0 1px 10px rgba(0, 0, 0,0);
+	z-index: 999; 
+	position: fixed;
+	top: 0;
+	
+}
+#header .center{
+	max-width: 1920px;
+	height: 70px;
+	margin: 0 auto;
+	background-color: #333;
+}
+#header .logo{
+	width: 30%;
+	height: 70px;
+	background: url('../img/logo.png') no-repeat left ;
+	text-indent: -9999px;
+	float: left;
+
+}
+#header .link{
+	width: 55%;
+	height: 70px;
+	line-height: 70px;
+	color: #eee;
+	float: right;
+
+
+}
+#header .link li{
+	width: 20%;
+	text-align: center;
+	float: left;
+
+}
+#header .link a{
+	color: #eee;
+	display: block;
+}
+#header .link a:hover,#header .active a{
+	background-color: #000;
+}
+#adver{
+	max-width: 1920px;
+	margin: 0 auto;
+	padding: 70px 0 0 0; 
+	position: relative;
+}
+
+#adver .center{
+	width: 40%;
+	height: 60px;
+	background-color: #000;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -10px 0 0 -20% ;
+	opacity: 0.6;
+	border-radius: 10px;
+}
+#adver .copy{
+	opacity: 1;
+	background-color: transparent;
+	padding: 3px 3px 0 3px;
+}
+#adver .search{
+	width: 70%;
+	height: 54px;
+	background-color: #fff;
+	display: block;
+	float: left;
+	color: #666;
+	border-radius: 10px;
+	border: 1px solid #666;
+	font-size: 24px;
+	padding: 0 12px;
+	outline: none;
+}
+#adver .button{
+	width: 30%;
+	height: 54px;
+	background-color: #eee;
+	display: block;
+	float: right;
+	color: #666;
+	border-radius: 10px;
+	border: 1px solid #333;
+	border-left-width: 3px;
+	font-size: 24px;
+	padding: 0 12px;
+	outline: none;
+	cursor: pointer;
+}
+
+.footer{
+ 	background-color: #222; 
+ 	clear: both;
+ 	position: relative;
+ 	top: 20px;
+}
+.top{
+	max-width: 1263px;
+	height: 281px;
+	text-align: center;
+	margin: 0 auto;
+
+}
+.block{
+	width: 33.33%;
+	height: 281px;
+	display:block;
+	color: #ccc;
+	text-align: left;
+	vertical-align: ;
+	float: left;
+}
+/* .center2{
+	width: 330px;
+	height: 281px;
+	display: inline-block;
+	
+	text-align: left;
+}
+.right{
+	width: 330px;
+	height: 281px;
+	display: inline-block;
+	text-align: left;
+} */
+.footer h2{
+	font-size: 24px;
+	font-weight: normal;
+	padding: 20px 0 0 20px;
+}
+.footer hr{
+	width: 90%;
+	border: 1px dashed/*虚线*/ #111;
+}
+.footer ul{
+	font-size: 18px;
+	color: #777;
+	text-indent: 20px;
+	line-height: 2;
+
+}
+.buttom{
+	padding: 15px 0;
+	background-color: #000;
+	text-align: center;
+	color: #777;
+	border: 1px solid #444;
+}
+.move{
+	display: none;
+}
+
+
+/* 媒体查询编写 */
+/* 页面大于1200px，主要是pc端 */
+@media (min-width: 1200px) {
+	
+}
+/* 在992-1199px中等屏幕，分辨率低的pc */
+@media (min-width: 992px) and (max-width: 1199px) {
+	#adver .center{
+	width: 50%;
+	margin: -10px 0 0 -25% ;
+
+	}
+	#adver .botton,#adver .search{
+		font-size: 22px;
+	}
+}
+/* 在768和991px之间，小屏幕，主要是pad */
+@media (min-width: 768px) and (max-width: 991px) {
+	#adver .center{
+	width: 60%;
+	margin: -10px 0 0 -30% ;
+	}
+	#adver .botton,#adver .search{
+		font-size: 20px;
+	}
+}
+/* 在480和767像素之间屏幕，超小屏幕，主要是手机 */
+@media (min-width: 480px) and (max-width: 767px) {
+	#header,#header .center,#header .link {
+		height: 45px;
+	}
+	#header .logo,.footer .top{
+		display: none;
+	}
+	#header .link{
+		width: 100%;
+		line-height: 45px;
+	}
+	#adver{
+		padding: 45px 0 0 0;
+	}
+	#adver .center{
+	width: 70%;
+	height: 53px;
+	margin: -10px 0 0 -35% ;
+	}
+	#adver .button,#adver .search{
+		font-size: 18px;
+		height: 45px;
+	}
+	.move{
+		display: block;
+		font-size: 18px;
+		color: #fff;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+}
+
+
+.chen{
+	text-align: center;
+/* 	 background-color: #eee; */
+	max-width: 1263px;
+/* 	height: 1150px;  */
+	margin: 30px auto;
+}
+.chen .center1{
+	text-align: center;
+	background-color: #333;
+	max-width: 970px;
+	margin: 0 auto;
+	color: #fff;
+}
+.chen .center h2{
+	font-size: 45px;
+	letter-spacing: 2px;
+	color: #666;
+	margin: 10px;
+
+}
+.chen .center p{
+	color: #666;
+	margin: 10px;
+}
+.chen figure{
+	width: 300px;
+	border:1px solid #666;
+	display: inline-block; 
+	padding: 4px;
+	border-radius: 4px;
+	margin: 15px 12px;
+	text-align: left;
+	position: relative;
+}
+.chen figure img{
+	vertical-align: middle;
+}
+.chen figure figcaption{
+	text-align: left;
+	color: #777;
+	line-height: 1.5;
+	font-size: 18px;
+	letter-spacing: 1px;
+	padding: 7px;
+}
+.title{
+	color: #333;
+	font-weight: normal;
+
+}
+.sat{
+	float: right ;
+	font-size: 18px;
+	color: #999;
+	font-style: normal;
+}
+.chen span
+{
+	color: #f60;
+}
+.type{
+	width: 90px;
+	height: 25px;
+	line-height: 25px;
+	font-size: 18px;
+	text-align: center;
+	color: #fff;
+	background-color: #59b200;
+	position: absolute;
+	top: 4px;
+	left: 4px;
+}
+
+
+
+/* 在小于480像素的屏幕，微小屏幕，更低分辨率的手机 */
+@media (max-width: 479px) {
+	#header,#header .center,#header .link {
+		height: 45px;
+	}
+	#header .logo,.xs-hidden,.footer .top{
+		display: none;
+	}
+	#header .link{
+		width: 100%;
+		line-height: 45px;
+	}
+	#header .li{
+		width: 25%;
+
+	}
+	#adver{
+		padding: 45px 0 0 0;
+	}
+	#adver .center{
+	width: 80%;
+	margin: -10px 0 0 -40% ;
+	height: 48px;
+	}
+	#adver .button,#adver .search{
+		font-size: 16px;
+		height: 40px;
+	}
+	.move{
+		display: block;
+		font-size: 18px;
+		color: #fff;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+}
